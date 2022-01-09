@@ -1,0 +1,29 @@
+.nav {
+  font-size: 16px;
+
+  &__btn {
+    display: flex;
+    background-color: rgba(#ffffff, 0);
+    border: none;
+  }
+
+  &__line {
+    display: block;
+    width: 24px;
+    height: 1px;
+    background-color: $main-txt;
+    margin-bottom: 5px;
+
+    &:last-child {
+      width: 15px;
+    }
+  }
+
+  &__text {
+    font-family: $font-text;
+    display: block;
+    color: $head-txt;
+    margin-left: 12px;
+    font-size: 16px;
+  }
+}

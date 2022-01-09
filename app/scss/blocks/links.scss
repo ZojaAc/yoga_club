@@ -1,0 +1,22 @@
+.links {
+  &-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__btn {
+    width: 25px;
+    height: 25px;
+    padding: 5px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  &-web {
+    display: flex;
+    justify-content: flex-end;
+  }
+}

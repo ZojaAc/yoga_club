@@ -1,0 +1,75 @@
+.comments {
+  padding-bottom: 147px;
+
+  &-box {
+    padding: 28px 95px 30px 87px;
+    background-color: $bg-main;
+    box-shadow: $bg-shadow;
+
+    &:first-child {
+      margin-right: 20px;
+    }
+  }
+
+  &__symbol {
+    margin-bottom: 17px;
+  }
+
+  &__person-img {
+    object-fit: cover;
+    height: 52px;
+    width: 52px;
+  }
+
+  &__text {
+    display: block;
+    @include font(12px, 20px);
+    color: $main-txt;
+
+    &--plus {
+      margin-bottom: 22px;
+      padding-right: 85px;
+    }
+  }
+
+  &-person {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  &-person-info {
+    margin-left: 13px;
+
+    .links-web {
+      justify-content: flex-start;
+    }
+  }
+
+  &__name {
+    display: block;
+    @include font(12px, 17px);
+    color: rgba($mark-txt, 0.7);
+  }
+
+  &__date {
+    display: block;
+    @include font(10px, 16px);
+    color: rgba($main-txt, 0.7);
+  }
+
+  &-btn {
+    display: block;
+    padding: 9px 18px;
+    width: 45px;
+    height: 30px;
+    position: absolute;
+    top: calc(50% - 22px);
+    right: -25px;
+
+    &-prev {
+      transform: rotate(180deg);
+      left: -25px;
+    }
+  }
+
+}

@@ -1,0 +1,24 @@
+.entry {
+  margin: 0 auto;
+  max-width: 270px;
+
+  &__block {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    text-decoration: none;    
+    margin: 0 auto;
+  }
+
+  &__btn {
+    padding: 15px 23px;
+    background-color: $mark-txt;
+  }
+
+  &__text {
+    margin-left: 13px;
+    color: $mark-txt;
+    font-size: 14px;
+    line-height: 20px;
+  }
+}

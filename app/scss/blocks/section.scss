@@ -1,0 +1,19 @@
+.section {
+  max-width: 976px;
+  margin: 0 auto;
+  font-family: $font-text;
+  padding-top: 65px;
+  padding-bottom: 65px;
+
+  &__text {
+    color: $main-txt;
+    @include font(12px, 20px);
+    margin-top: 13px;
+    margin-bottom: 16px;
+
+    &-mark {
+      @include font(12px, 15px);
+      color: $mark-txt;
+    }
+  }
+}

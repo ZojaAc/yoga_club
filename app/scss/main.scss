@@ -1,0 +1,28 @@
+@import "variables";
+@import "reset";
+@import "mixins";
+@import "fonts"; // перенести наверх?
+
+//подключаем БЭМ блоки
+@import "blocks/background.scss";
+@import "blocks/relative.scss";
+@import "blocks/chapter.scss";
+@import "blocks/header.scss";
+@import "blocks/button.scss";
+@import "blocks/nav.scss";
+@import "blocks/entry.scss";
+@import "blocks/links.scss";
+@import "blocks/phone.scss";
+@import "blocks/slogan.scss";
+@import "blocks/content.scss";
+@import "blocks/wrapper.scss";
+@import "blocks/title.scss";
+@import "blocks/section.scss";
+@import "blocks/next.scss";
+@import "blocks/direction.scss";
+@import "blocks/cards.scss";
+@import "blocks/team.scss";
+@import "blocks/comments.scss";
+@import "blocks/footer.scss";
+@import "blocks/form.scss";
+

@@ -1,0 +1,44 @@
+.form {
+  &-wrapper {
+    border: none;
+  }
+  
+  &__title {
+    @include font(30px, 40px, bold);
+    margin-bottom: 40px;
+  }
+
+  &__cell, &__btn {
+    width: 100%;  
+  }
+
+  &__cell {
+    margin-bottom: 47px;
+    background-color: rgba(#ffffff, 0);
+    border: none;
+    border-bottom: 1px solid $main-txt;
+    padding: 6px;
+    color: $main-txt;
+    outline: none;
+  }
+
+  &__cell::-webkit-input-placeholder {
+    font-family: $font-text;
+    color: rgba($main-txt, 0.4);
+  }
+
+  &__cell::-moz-placeholder {
+    font-family: $font-text;
+    color: rgba($main-txt, 0.4);
+  }
+
+  &__btn {
+    background-color: $mark-txt;
+    padding: 18px;
+    text-align: center;
+    border: none;
+    color: $bg-main;
+    @include font(14px, 20px);
+    margin-top: 10px;
+  }
+}

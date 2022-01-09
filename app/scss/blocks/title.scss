@@ -1,0 +1,25 @@
+.title {
+  color: $main-txt;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 65px;
+
+  &-sm {
+    font-size: 16px;
+    margin: 0;
+    text-align: start;
+  }
+
+  &-cards {
+    @include font(18px, 20px, bold);
+    margin: 0;
+  }
+  
+  &-team {
+    @include font(18px, 20px, bold);
+    margin-bottom: 11px;
+    margin-top: 55px;
+    text-align: start;
+  }
+}

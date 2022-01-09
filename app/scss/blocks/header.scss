@@ -1,0 +1,15 @@
+.header {
+  font-family: $font-text;
+  color: $head-txt;
+  padding: 70px 140px;
+ 
+  &__nav, &__info {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__city {
+    display: block;
+    font-size: 16px;
+  }
+}

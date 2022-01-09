@@ -1,0 +1,61 @@
+.direction {
+  .relative {
+    display: block;
+  }
+     
+  &-info {
+    padding: 42px 46px 26px;
+    background-color: $bg-main;
+    box-shadow: $bg-shadow;
+    flex-grow: 1;
+  }
+
+  &__btn {
+    display: block;
+    padding: 28px;
+
+    &--small {
+      padding: 9px 18px;
+      width: 45px;
+      height: 30px;
+      position: absolute;
+      bottom: 35px;
+      right: 35px;
+    }
+  }
+
+  &-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    // width: 50%;
+
+    .direction-info {
+      padding: 33px 100px 34px 33px;
+    }
+  }
+
+  &-left {
+    margin-right: 34px;
+    // width: 50%;
+  }
+
+  &-flex {
+    display: flex;
+  }
+
+  &__more {
+    padding: 14px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 20px;
+    background-color: $bg-main;
+    box-shadow: $bg-shadow;
+  }
+
+  &__img {
+    display: block;
+    object-fit: cover;
+  }
+}

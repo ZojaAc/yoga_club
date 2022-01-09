@@ -1,0 +1,56 @@
+.footer {
+  font-family: $font-text;
+  @include font(12px, 20px);
+  color: $main-txt;
+  background: #fcf8fe url(../img/bg-footer.png) no-repeat center/cover;
+  
+  &-wrapper {
+    max-width: 976px;
+    margin: 0 auto;
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  &-information {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-right: 120px;
+    width: 50%;
+  }
+
+  &-item {
+    margin-bottom: 32px;
+    width: 50%;
+  }
+
+  &__info-title {
+    font-size: 14px;
+    display: block;
+  }
+
+  &__info {
+    display: block;
+  }
+
+  &-form {
+    width: 50%;
+  }
+
+  &-bottom {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: #8373A1;
+
+    .footer__info {
+      color: rgba($bg-main, 0.5);
+    }
+
+    .footer-wrapper {
+      display: flex;
+      justify-content: space-between;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+}

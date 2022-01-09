@@ -1,0 +1,101 @@
+.team {
+  width: 50%;
+
+  &-box-left {
+    margin-right: 67px;
+  }
+
+  &-person {
+    min-height: 160px;
+    position: relative;
+    margin-bottom: 33px;
+  }
+
+  &-person-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+  }
+
+  &-info-box {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: $bg-main;
+    padding: 19px 25px 17px 140px;
+    box-shadow: $bg-shadow;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &-info-text {
+    margin-right: 88px;
+  }
+
+  &__name, &__less {
+    @include font(12px, 20px);
+    color: $mark-txt;
+    display: block;
+  }
+
+  &__less {
+    color: $main-txt;
+    margin-top: 9px;
+  }
+
+  &-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__link-more {
+    @include font(12px, 20px);
+    color: $main-txt;
+    text-decoration: underline;
+    min-height: 25px;
+  }
+
+  &__experience {
+    @include font(14px, 20px);
+    color: $mark-txt;
+    margin-bottom: 24px;
+    display: block;
+  }
+
+  &__description {
+    @include font(12px, 20px);
+    color: $main-txt;
+  }
+
+  &-pages {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 170px;
+    margin: 0 auto;
+    margin-top: 10px;
+  }
+
+  &__page {
+    padding: 9px 18px;
+    width: 45px;
+    height: 30px;
+
+    &--left {
+      background-color: #fcf8fe;
+      border: 1px solid $main-txt;
+      background-image: url(../img/vector-dark.svg);
+    }
+  }
+
+  &__page-text {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  &__photo {
+    object-fit: cover;
+  }
+}

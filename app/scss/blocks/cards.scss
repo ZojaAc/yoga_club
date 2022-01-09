@@ -1,0 +1,82 @@
+.cards {
+  &-dates {
+    margin: 0 auto;
+    max-width: 286px;
+    color: $mark-txt;
+    @include font(12px, 20px);
+    margin-bottom: 50px;
+  }
+
+  &__date {
+    display: block;
+    cursor: pointer;
+    
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__btn {
+    background-color: $main-txt;
+    padding: 16px 40px;
+    text-align: center;
+    color: $bg-main;
+    @include font(12px, 20px);
+    border: none;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 57px;
+    opacity: 0;
+  }
+  
+  &-info {
+    background-color: $bg-main;
+    padding: 58px 54px 54px;
+    position: relative;
+
+    &-text {
+      text-align: center;
+    }
+
+    &:hover {
+      min-height: 330px;
+     
+      .cards__btn {
+        opacity: 1;
+        transition: opacity 200ms ease;
+      }      
+    }
+  }
+
+  &__text {
+    color: $mark-txt;
+    margin-top: 19px;
+    margin-bottom: 26px;
+  }
+
+  &__price {
+    @include font(30px, 30px, bold);
+    color: $main-txt;
+  }
+
+  &-box-wrapper {
+    min-height: 330px;
+    margin-right: 37px;
+    width: 33%;   
+    // box-shadow: $bg-shadow;
+  }
+
+  &-box-height {
+    height: 237px;
+    overflow: hidden;
+
+    &:hover {
+      height: 330px;
+      transition: height 400ms ease;
+    }
+  }
+
+  &-box {
+    height: 330px;
+  }
+}
