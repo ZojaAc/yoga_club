@@ -1,7 +1,4 @@
 .entry {
-  margin: 0 auto;
-  max-width: 270px;
-
   &__block {
     display: flex;
     justify-content: center;
@@ -13,12 +10,31 @@
   &__btn {
     padding: 15px 23px;
     background-color: $mark-txt;
+
+    @include tablet {
+      padding: 4px 12px;
+    }
+  }
+
+  .arrow-right {
+    color: $bg-main;
+    width: 11px;
+    height: 19px;
+
+    @include tablet {
+      width: 5px;
+      height: 9px;
+    }
   }
 
   &__text {
     margin-left: 13px;
     color: $mark-txt;
-    font-size: 14px;
-    line-height: 20px;
+    @include font(14px, 20px);
+
+    @include tablet {
+      margin-left: 7px;
+      @include font(10px, 12px);
+    }
   }
 }

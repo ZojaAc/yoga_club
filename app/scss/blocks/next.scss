@@ -1,7 +1,7 @@
 .next {
   background-color: $main-txt;
-  background-image: url(../img/vector.svg);
-  background-repeat: no-repeat;
-  background-position: center center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
 }

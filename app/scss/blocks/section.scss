@@ -2,8 +2,14 @@
   max-width: 976px;
   margin: 0 auto;
   font-family: $font-text;
-  padding-top: 65px;
+  padding-top: 40px;
   padding-bottom: 65px;
+
+  @include tablet {
+    max-width: 625px;
+    padding-top: 50px;
+    padding-bottom: 60px;
+  }
 
   &__text {
     color: $main-txt;
@@ -11,9 +17,19 @@
     margin-top: 13px;
     margin-bottom: 16px;
 
+    @include tablet {
+      @include font(10px, 15px);
+      margin-top: 9px;
+      margin-bottom: 10px;
+    }
+
     &-mark {
       @include font(12px, 15px);
       color: $mark-txt;
+
+      @include tablet {
+        @include font(10px, 15px);
+      }
     }
   }
 }

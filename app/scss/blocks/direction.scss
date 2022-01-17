@@ -1,4 +1,12 @@
 .direction {
+  padding-left: 10px;
+  padding-right: 40px;
+
+  @include tablet {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
   .relative {
     display: block;
   }
@@ -8,11 +16,18 @@
     background-color: $bg-main;
     box-shadow: $bg-shadow;
     flex-grow: 1;
+
+    @include tablet {
+      padding: 10px 20px;
+    }
   }
 
   &__btn {
-    display: block;
     padding: 28px;
+
+    @include tablet {
+      padding: 19px;
+    }
 
     &--small {
       padding: 9px 18px;
@@ -21,23 +36,33 @@
       position: absolute;
       bottom: 35px;
       right: 35px;
+
+      @include tablet {
+        padding: 6px 12px;
+        width: 30px;
+        height: 20px;
+        bottom: 24px;
+        right: 24px;
+      }
     }
+  }
+
+  .arrow-right {
+    color: $bg-main;
   }
 
   &-right {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    // width: 50%;
-
+    
     .direction-info {
       padding: 33px 100px 34px 33px;
-    }
-  }
 
-  &-left {
-    margin-right: 34px;
-    // width: 50%;
+      @include tablet {
+        padding: 20px 40px 20px 20px;
+      }
+    }
   }
 
   &-flex {
@@ -52,6 +77,11 @@
     line-height: 20px;
     background-color: $bg-main;
     box-shadow: $bg-shadow;
+
+    @include tablet {
+      font-size: 10px;
+      padding: 9px;
+    }
   }
 
   &__img {

@@ -2,9 +2,15 @@
   &-dates {
     margin: 0 auto;
     max-width: 286px;
+    min-height: 22px;
     color: $mark-txt;
     @include font(12px, 20px);
     margin-bottom: 50px;
+
+    @include tablet {
+      max-width: 240px;
+      margin-bottom: 45px;
+    }
   }
 
   &__date {
@@ -12,8 +18,14 @@
     cursor: pointer;
     
     &:hover {
-      text-decoration: underline;
+      border-bottom: 1px solid $mark-txt;
+      // text-decoration: underline;
+      // text-underline-offset: 5px;
     }
+  }
+  
+  &-box {
+    height: 330px;
   }
 
   &__btn {
@@ -27,24 +39,38 @@
     position: absolute;
     bottom: 57px;
     opacity: 0;
+
+    @include tablet {
+      padding: 10px 20px;
+      @include font(10px, 20px);
+      bottom: 30px;
+    }
   }
   
   &-info {
     background-color: $bg-main;
     padding: 58px 54px 54px;
     position: relative;
-
+    
     &-text {
       text-align: center;
     }
 
     &:hover {
       min-height: 330px;
-     
+
       .cards__btn {
         opacity: 1;
         transition: opacity 200ms ease;
       }      
+    }
+    
+    @include tablet {
+      padding: 38px 28px;
+
+      &:hover {
+        min-height: 222px;
+      }
     }
   }
 
@@ -52,31 +78,56 @@
     color: $mark-txt;
     margin-top: 19px;
     margin-bottom: 26px;
+
+    @include tablet {
+      margin-top: 12px;
+      margin-bottom: 12px;
+    }
   }
 
   &__price {
     @include font(30px, 30px, bold);
     color: $main-txt;
+
+    @include tablet {
+      @include font(21px, 21px, bold);
+    }
   }
 
   &-box-wrapper {
     min-height: 330px;
     margin-right: 37px;
     width: 33%;   
+    
+    &:last-child {
+      margin-right: 0;
+    }
+
     // box-shadow: $bg-shadow;
+
+    @include tablet {
+      min-height: 222px;
+      margin-right: 24px;
+    }
   }
 
   &-box-height {
     height: 237px;
     overflow: hidden;
-
+    box-shadow: $bg-shadow;
+    
     &:hover {
       height: 330px;
       transition: height 400ms ease;
     }
-  }
 
-  &-box {
-    height: 330px;
+    @include tablet {
+      height: 160px;
+
+      &:hover {
+        height: 222px;
+        transition: height 400ms ease;
+      }
+    }
   }
 }

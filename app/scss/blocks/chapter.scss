@@ -1,22 +1,29 @@
 .chapter {
   position: absolute;
   top: 50%;
-  right: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  right: 0;  
   
   &__number {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: rgba(#aea4c8, 0.5);
     @include font(30px, 30px, bold);
-    margin-right: 10px;    
-  }
+       
+    &::after {
+      content: '';
+      width: 55px;
+      height: 1px;
+      background-color: rgba($head-txt, 0.73);
+      margin-left: 10px;
 
-  &__line {
-    display: block;
-    width: 55px;
-    height: 1px;
-    background-color: rgba($head-txt, 0.73);
+      @include tablet {
+        width: 18px;
+      }
+    }
+
+    @include tablet {
+      @include font(18px, 18px, bold);
+    }
   }
 }

@@ -1,20 +1,44 @@
 .comments {
-  padding-bottom: 147px;
+  padding: 60px 30px 140px 30px;
 
+  @include tablet {
+    padding-left: 100px;
+    padding-right: 80px;
+  }
+
+  &-wrapper {
+    @include tablet {
+      flex-direction: column;
+    }
+  }
+  
   &-box {
     padding: 28px 95px 30px 87px;
     background-color: $bg-main;
     box-shadow: $bg-shadow;
 
+    @include tablet {
+      padding-right: 65px;
+    }
+
     &:first-child {
       margin-right: 20px;
+
+      @include tablet {
+        margin-right: 0;
+        margin-bottom: 18px;
+      }
     }
   }
 
   &__symbol {
-    margin-bottom: 17px;
+    margin-bottom: 15px;
   }
 
+  &__img {
+    color: rgba($main-txt, 0.39);
+  }
+  
   &__person-img {
     object-fit: cover;
     height: 52px;
@@ -28,7 +52,7 @@
 
     &--plus {
       margin-bottom: 22px;
-      padding-right: 85px;
+      padding-right: 45px;
     }
   }
 
@@ -58,8 +82,10 @@
   }
 
   &-btn {
-    display: block;
-    padding: 9px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7px 17px;
     width: 45px;
     height: 30px;
     position: absolute;
@@ -67,8 +93,38 @@
     right: -25px;
 
     &-prev {
-      transform: rotate(180deg);
       left: -25px;
+    }
+
+    .arrow-left, .arrow-right {
+      color: $bg-main;
+    }
+
+    .arrow-left {
+      transform: rotate(180deg);
+    }
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  .comments-btn-tablet {
+    margin: 0 auto;
+    margin-top: 40px;
+    display: none;
+
+    .team-pages {
+      margin: 0 auto;
+
+      .team-pages__text {
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+    }
+
+    @include tablet {
+      display: block;
     }
   }
 

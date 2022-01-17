@@ -3,12 +3,22 @@
   @include font(12px, 20px);
   color: $main-txt;
   background: #fcf8fe url(../img/bg-footer.png) no-repeat center/cover;
+
+  @include tablet {
+    background: none;
+  }
   
   &-wrapper {
     max-width: 976px;
     margin: 0 auto;
     padding-top: 70px;
     padding-bottom: 70px;
+
+    @include tablet {
+      flex-wrap: wrap;
+      flex-wrap: wrap-reverse;
+      padding: 0;
+    }
   }
 
   &-information {
@@ -17,32 +27,68 @@
     align-items: center;
     margin-right: 120px;
     width: 50%;
+    padding-top: 80px;
+    padding-left: 40px;
+    padding-bottom: 50px;
+
+    @include tablet {
+      width: 100%;
+      background-color: #8373a1;
+      margin-right: 0;
+      padding: 70px 40% 0 80px;
+      color: $bg-main;
+    }
   }
 
   &-item {
-    margin-bottom: 32px;
+    // margin-bottom: 10px;
     width: 50%;
+
+    @include tablet {
+      margin-bottom: 32px;
+    }
   }
 
   &__info-title {
-    font-size: 14px;
+    @include font(14px, 20px);
     display: block;
   }
 
   &__info {
     display: block;
+    @include font(12px, 20px);
+    text-decoration: none;
+  }
+
+  .links-img {
+    color: $main-txt;
+
+    @include tablet {
+      color: $bg-main;
+    }
   }
 
   &-form {
     width: 50%;
+
+    @include tablet {
+      width: 100%;
+      padding: 65px 180px;
+      background: #fcf8fe url(../img/bg-footer-tablet.png) no-repeat center/cover;
+    }
   }
 
   &-bottom {
     padding-top: 30px;
     padding-bottom: 30px;
-    background-color: #8373A1;
+    background-color: #8373a1;
 
-    .footer__info {
+    @include tablet {
+      padding: 18px 45% 75px 80px;
+    }
+
+    .footer__info-postbox {
+      text-decoration: none;
       color: rgba($bg-main, 0.5);
     }
 
@@ -51,6 +97,27 @@
       justify-content: space-between;
       padding-top: 0;
       padding-bottom: 0;
+
+      @include tablet {
+        justify-content: flex-start;
+      }
+    }
+
+    .footer__info {
+      color: rgba($bg-main, 0.5);
+      margin-left: 40px;
+      display: block;
+
+      @include tablet {
+        margin-left: 0;
+      }
+    }      
+    
+    .footer__info--place {
+      @include tablet {
+        order: 2;
+        margin-left: 20px;
+      }      
     }
   }
 }
