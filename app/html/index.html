@@ -5,9 +5,6 @@
 </head>
 
 <body>
-  <!-- <img class="testDesktop" src="../img/DesktopYoga.png" alt=""> -->
-  <!-- <img class="testTablet" src="../img/TabletYoga.png" alt=""> -->
-
   <svg style="display: none;">
     <symbol id="arrow" viewBox="0 0 11 19">
       <path d="M1 1L10 9.5L1 18" fill="none" stroke="currentColor"/>
@@ -113,6 +110,7 @@
           <div class="wrapper direction">
             <div class="direction-left">
               <picture class="picture">
+                <source media="(max-width: 320px)" srcset="img/direction-main-mobile.jpg">
                 <source media="(max-width: 768px)" srcset="img/direction-main-tablet.jpg">
                 <img class="direction__img" src="img/direction-main.jpg" alt="img-main-direction">
               </picture>
@@ -132,6 +130,7 @@
             <div class="direction-right">
               <div class="direction-flex">
                 <picture class="picture">
+                  <source media="(max-width: 320px)" srcset="img/direction-extra-mobile.jpg">
                   <source media="(max-width: 768px)" srcset="img/direction-extra-tablet.jpg">
                   <img class="direction__img" src="img/direction-extra.jpg" alt="img-extra-direction">
                 </picture>                
@@ -150,6 +149,7 @@
               </div>
               <div class="direction-flex">
                 <picture class="picture">
+                  <source media="(max-width: 320px)" srcset="img/direction-extra-2-mobile.jpg">
                   <source media="(max-width: 768px)" srcset="img/direction-extra-2-tablet.jpg">
                   <img class="direction__img" src="img/direction-extra-2.jpg" alt="img-extra-direction">
                 </picture>                       
@@ -185,7 +185,7 @@
             <span class="cards__date">6 месяцев</span>
             <span class="cards__date">12 месяцев</span>
           </div>
-          <div class="wrapper">
+          <div class="wrapper wrapper--mobile">
             <div class="cards-box-wrapper">
               <div class="cards-box-height">
                 <div class="cards-box">
@@ -238,13 +238,14 @@
           <span class="chapter__line"></span>
         </div>
 
-        <section class="section">
-          <h2 class="title title-person">Наша команда</h2>
-          <div class="wrapper">
-            <div class="team team-box-left">
+        <section class="section team">
+          <h2 class="title title-person">Наша команда</h2>          
+          <div class="wrapper pages team-wrapper">
+            <div class="team-box-left">
               <div class="team-person">
                 <div class="team-person-img">
                   <picture class="picture">
+                    <source media="(max-width: 320px)" srcset="img/team-img-mobile.jpg">
                     <source media="(max-width: 768px)" srcset="img/team-img-tablet.jpg">
                     <img class="team__photo" src="img/team-img.jpg" alt="person-photo">
                   </picture>
@@ -330,7 +331,7 @@
                 </div>
               </div>
             </div>
-            <div class="team">
+            <div class="team-box-right">
               <h3 class="title title-team">Серёжа Попов</h3>
               <span class="team__experience">Опыт преподавания: 8 лет</span>
               <p class="team__description">Образование и опыт работы: Практикует с 2011 года, является 
@@ -347,16 +348,14 @@
                 Организатор и участник многочисленных конвенций и семинаров по йоге, медитативным техникам 
                 и здоровому питанию.
               </p>
-            </div>        
-          </div>
-          <div class="team-pages">
-            <div class="team-pages__scroll next team-pages__scroll--left">
+            </div>   
+            <div class="pages__scroll next pages__scroll--left" role="button" aria-label="previous page">
               <svg class="arrow-left" width="10" height="15" role="img" aria-label="left arrow">
                 <use xlink:href="#arrow"/>
               </svg>
             </div>
-            <div class="team-pages__text">1 / 9</div>
-            <div class="team-pages__scroll next">
+            <div class="pages__text">1 / 9</div>
+            <div class="pages__scroll next" role="button" aria-label="next page">
               <svg class="arrow-right" width="10" height="15" role="img" aria-label="right arrow">
                 <use xlink:href="#arrow"/>
               </svg>
@@ -373,7 +372,7 @@
 
         <section class="section comments">
           <h2 class="title title-comments">Отзывы</h2>
-          <div class="wrapper relative comments-wrapper">
+          <div class="wrapper pages comments-wrapper">
             <div class="comments-box">
               <div class="comments__symbol">
                 <svg class="comments__img" width="27" height="23" role="img" aria-label="quote start">
@@ -440,31 +439,17 @@
                 </div>
               </div>
             </div>
-            <a class="comments-btn comments-btn-prev next" href="#" onclick="return false" aria-label="previous page">
+            <div class="pages__scroll next pages__scroll--left" role="button" aria-label="previous page">
               <svg class="arrow-left" width="10" height="15" role="img" aria-label="left arrow">
                 <use xlink:href="#arrow"/>
               </svg>
-            </a>
-            <a class="comments-btn next" href="#" onclick="return false" aria-label="next page">
+            </div>
+            <div class="pages__text">1 / 9</div>
+            <div class="pages__scroll next" role="button" aria-label="next page">
               <svg class="arrow-right" width="10" height="15" role="img" aria-label="right arrow">
                 <use xlink:href="#arrow"/>
               </svg>
-            </a>
-            <div class="comments-btn-tablet">
-              <div class="team-pages">
-                <div class="team-pages__scroll next team-pages__scroll--left">
-                  <svg class="arrow-left" width="10" height="15" role="img" aria-label="left arrow">
-                    <use xlink:href="#arrow"/>
-                  </svg>
-                </div>
-                <div class="team-pages__text">1 / 9</div>
-                <div class="team-pages__scroll next">
-                  <svg class="arrow-right" width="10" height="15" role="img" aria-label="right arrow">
-                    <use xlink:href="#arrow"/>
-                  </svg>
-                </div>
-              </div>
-            </div>            
+            </div>
           </div>    
         </section>  
       </div>  

@@ -6,6 +6,10 @@
   &__title {
     @include font(30px, 40px, bold);
     margin-bottom: 40px;
+
+    @include mobile {
+      @include font(20px, 27px, bold);
+    }
   }
 
   &__cell, &__btn {
@@ -20,6 +24,10 @@
     padding: 6px;
     color: $main-txt;
     outline: none;
+
+    @include mobile {
+      margin-bottom: 25px;
+    }
   }
 
   &__cell::-webkit-input-placeholder {
@@ -40,5 +48,10 @@
     color: $bg-main;
     @include font(14px, 20px);
     margin-top: 10px;
+
+    @include mobile {
+      margin-top: 0;
+      padding: 20px 60px;
+    }
   }
 }

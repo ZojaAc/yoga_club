@@ -2,6 +2,10 @@
   position: absolute;
   top: 50%;
   right: 0;  
+
+  @include mobile {
+    display: none;
+  }
   
   &__number {
     display: flex;

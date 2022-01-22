@@ -1,11 +1,34 @@
 .team {
-  width: 50%;
+  @include mobile {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  &-wrapper {
+    flex-wrap: wrap;
+
+    @include mobile {
+      flex-direction: column;
+    }    
+  }
+
+  &-box-left, &-box-right {
+    width: 50%;
+
+    @include mobile {
+      width: 100%;
+    }
+  }
 
   &-box-left {
     padding-right: 50px;
 
     @include tablet {
       padding-right: 40px;
+    }
+
+    @include mobile {
+      padding-right: 0;
     }
   }
 
@@ -18,6 +41,19 @@
       min-height: 105px;
       margin-bottom: 20px;
     }
+
+    @include mobile {
+      min-height: auto;
+      position: static;
+      margin-bottom: 0;
+      display: flex;
+      justify-content: space-between;
+      background-color: $bg-main;
+ 
+      &:not(:first-child) {
+        display: none;
+      }
+    }
   }
 
   &-person-img {
@@ -25,6 +61,10 @@
     top: 0;
     left: 0;
     z-index: 2;
+
+    @include mobile {
+      position: static;
+    }
   }
 
   &-info-box {
@@ -40,6 +80,14 @@
     @include tablet {
       padding: 10px 10px 10px 80px;
     }
+
+    @include mobile {
+      position: static;
+      padding: 18px 20px 12px 10px;
+      display: flex;
+      justify-content: space-between;
+      flex-grow: 1;
+    }
   }
 
   &-info-text {
@@ -47,6 +95,10 @@
 
     @include tablet {
       margin-right: 30px;
+    }
+
+    @include mobile {
+      margin-right: 15px;
     }
   }
 
@@ -67,12 +119,22 @@
     @include tablet {
       margin-top: 6px;
     }
+
+    @include mobile {
+      margin-top: 7px;
+    }
   }
 
   &-links {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    .links-web {
+      @include mobile {
+        flex-direction: column;
+      }      
+    }
   }
 
   &__link-more {
@@ -83,6 +145,10 @@
 
     @include tablet {
       @include font(10px, 20px);
+    }
+
+    @include mobile {
+      display: none;
     }
   }
 
@@ -96,6 +162,12 @@
       @include font(12px, 20px);
       margin-bottom: 15px;
     }
+
+    @include mobile {
+      @include font(10px, 20px);
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
   }
 
   &__description {
@@ -105,32 +177,89 @@
     @include tablet {
       @include font(10px, 15px);
     }
+
+    @include mobile {
+      line-height: 13px;
+    }
   }
 
-  &-pages {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 150px;
-    margin: 0 auto;
-    margin-top: 15px;
-    margin-left: 30%;
-    
-    @include tablet {
-      margin-top: 7px;
-      max-width: 110px;
-      margin-left: 25%;  
-    }
+  .pages {
+    position: relative;
+    padding-bottom: 40px;
 
+    @include tablet {
+      padding-bottom: 25px;
+    }
+      
     &__text {
+      position: absolute;
+      bottom: 0;
+      left: 35%;
       color: $main-txt;
-      @include font(16px, 20px);
+      @include font(16px, 30px);
 
       @include tablet {
         @include font(10px, 20px);
       }
+
+      @include mobile {
+        display: none;
+      }
     }
 
+    &__scroll {
+      position: absolute;
+      bottom: 0;
+      left: 40%;
+      padding: 9px 18px;
+      width: 45px;
+      height: 30px;
+
+      @include tablet {
+        padding: 5px 12px;
+        width: 30px;
+        height: 20px;
+      }
+
+      @include mobile {
+        padding: 12px 6px;
+        width: 16px;
+        height: 32px;
+        bottom: auto;
+        left: auto;
+        top: 7%;
+        right: -25px;
+      }
+
+      &--left {
+        position: absolute;
+        bottom: 0;
+        left: 28%;
+        background-color: #fcf8fe;
+        padding: 8px 17px;
+        border: 1px solid $main-txt;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @include tablet {
+          padding: 4px 11px;
+          width: 30px;
+          height: 20px;
+        }
+
+        @include mobile {
+          margin-right: 100%;
+          padding: 11px 5px;
+          width: 16px;
+          height: 32px;
+          bottom: auto;
+          top: 7%;
+          left: -25px;
+        }
+      }
+    }
+    
     .arrow-right {
       color: $bg-main;
     }
@@ -138,27 +267,6 @@
     .arrow-left {
       color: $main-txt;
       transform: rotate(180deg);
-    }
-
-    &__scroll {
-      padding: 9px 18px;
-      width: 45px;
-      height: 30px;
-
-      &--left {
-        background-color: #fcf8fe;
-        padding: 8px 17px;
-        border: 1px solid $main-txt;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-
-      @include tablet {
-        padding: 5px 12px;
-        width: 30px;
-        height: 20px;
-      }
     }
   }
 

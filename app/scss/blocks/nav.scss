@@ -23,6 +23,14 @@
     &:last-child {
       width: 15px;
       margin-bottom: 0;
+
+      @include mobile {
+        width: 22px;
+      }
+    }
+
+    @include mobile {
+      width: 30px;
     }
   }
 
@@ -36,6 +44,10 @@
     @include tablet {
       font-size: 12px;
       margin-left: 6px;
+    }
+
+    @include mobile {
+      display: none;
     }
   }
 }

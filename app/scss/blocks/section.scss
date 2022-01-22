@@ -11,6 +11,10 @@
     padding-bottom: 60px;
   }
 
+  @include mobile {
+    padding-bottom: 20px;
+  }
+
   &__text {
     color: $main-txt;
     @include font(12px, 20px);

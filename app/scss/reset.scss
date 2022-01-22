@@ -11,20 +11,3 @@ img {
 html{
   scroll-behavior: smooth;
 }
-
-.testDesktop {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  margin-left: calc(-1440px / 2);
-  z-index: 5;
-  opacity: 0.5;
-}
-.testTablet {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  margin-left: calc(-768px / 2);
-  z-index: 5;
-  opacity: 0.5;
-}

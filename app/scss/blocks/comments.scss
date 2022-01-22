@@ -6,6 +6,10 @@
     padding-right: 80px;
   }
 
+  @include mobile {
+    padding: 10px 0 20px 0;
+  }
+
   &-wrapper {
     @include tablet {
       flex-direction: column;
@@ -13,12 +17,15 @@
   }
   
   &-box {
+    width: 50%;
     padding: 28px 95px 30px 87px;
     background-color: $bg-main;
     box-shadow: $bg-shadow;
 
     @include tablet {
-      padding-right: 65px;
+      width: 100%;
+      padding-right: 85px;
+      padding-bottom: 25px;
     }
 
     &:first-child {
@@ -28,11 +35,26 @@
         margin-right: 0;
         margin-bottom: 18px;
       }
+
+      @include mobile {
+        margin: 0;
+        padding: 20px 15px;
+      }
+    }
+
+    &:nth-child(2) {
+      @include mobile {
+        display: none;
+      }
     }
   }
 
   &__symbol {
     margin-bottom: 15px;
+
+    @include mobile {
+      margin-bottom: 12px;
+    }
   }
 
   &__img {
@@ -50,15 +72,25 @@
     @include font(12px, 20px);
     color: $main-txt;
 
-    &--plus {
-      margin-bottom: 22px;
-      padding-right: 45px;
+    @include mobile {
+      @include font(10px, 15px);
+      margin-bottom: 0;
+    
+      &--plus {
+        margin-bottom: 22px;
+        padding-right: 45px;
+
+        @include mobile {
+          margin-bottom: 16px;
+        }
+      }
     }
   }
 
   &-person {
     display: flex;
     justify-content: flex-start;
+    margin-top: 25px;
   }
 
   &-person-info {
@@ -81,19 +113,24 @@
     color: rgba($main-txt, 0.7);
   }
 
-  &-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 7px 17px;
-    width: 45px;
-    height: 30px;
-    position: absolute;
-    top: calc(50% - 22px);
-    right: -25px;
+  .pages {
+    position: relative;
 
-    &-prev {
-      left: -25px;
+    @include tablet {
+      padding-bottom: 50px;
+    }
+   
+    &__text {
+      display: none;
+      color: $main-txt;
+
+      @include tablet {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 45%;
+        @include font(10px, 16px);
+      }
     }
 
     .arrow-left, .arrow-right {
@@ -102,30 +139,61 @@
 
     .arrow-left {
       transform: rotate(180deg);
-    }
 
-    @include tablet {
-      display: none;
-    }
-  }
-
-  .comments-btn-tablet {
-    margin: 0 auto;
-    margin-top: 40px;
-    display: none;
-
-    .team-pages {
-      margin: 0 auto;
-
-      .team-pages__text {
-        margin-left: 10px;
-        margin-right: 10px;
+      @include mobile {
+        color: $main-txt;
       }
     }
 
-    @include tablet {
-      display: block;
+    &__scroll {
+      position: absolute;
+      top: 50%;
+      right: -25px;
+      padding: 9px 18px;
+      width: 45px;
+      height: 30px;
+
+      @include tablet {
+        top: auto;
+        right: auto;
+        bottom: 0;
+        left: 55%;
+        padding: 5px 12px;
+        width: 30px;
+        height: 20px;
+      }
+
+      @include mobile {
+        width: 30px;
+        height: 16px;
+        left: 60%;
+        padding: 4px 13px;
+      }
+
+      &--left {
+        position: absolute;
+        top: 50%;
+        left: -25px;
+        
+        @include tablet {
+          padding: 4px 11px;
+          width: 30px;
+          height: 20px;
+          top: auto;
+          left: auto;
+          bottom: 0;
+          left: 35%;
+        }
+
+        @include mobile {
+          width: 30px;
+          height: 16px;
+          left: 30%;
+          background-color: $bg-main;
+          padding: 3px 12px;
+          border: 1px solid $main-txt;
+        }
+      }
     }
   }
-
 }

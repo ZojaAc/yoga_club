@@ -11,6 +11,10 @@
       max-width: 240px;
       margin-bottom: 45px;
     }
+
+    @include mobile {
+      margin-bottom: 30px;
+    }
   }
 
   &__date {
@@ -26,6 +30,10 @@
   
   &-box {
     height: 330px;
+
+    @include mobile {
+      height: auto;
+    }
   }
 
   &__btn {
@@ -44,6 +52,13 @@
       padding: 10px 20px;
       @include font(10px, 20px);
       bottom: 30px;
+    }
+
+    @include mobile {
+      padding: 7px 23px;
+      position: static;
+      opacity: 1;
+      margin-top: 25px;
     }
   }
   
@@ -66,10 +81,18 @@
     }
     
     @include tablet {
-      padding: 38px 28px;
+      padding: 35px 28px;
 
       &:hover {
         min-height: 222px;
+      }
+    }
+
+    @include mobile {
+      padding: 20px 50px 25px 50px;
+
+      &:hover {
+        min-height: auto;
       }
     }
   }
@@ -83,6 +106,11 @@
       margin-top: 12px;
       margin-bottom: 12px;
     }
+
+    @include mobile {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
   }
 
   &__price {
@@ -91,6 +119,10 @@
 
     @include tablet {
       @include font(21px, 21px, bold);
+    }
+
+    @include mobile {
+      @include font(18px, 20px, bold);
     }
   }
 
@@ -103,11 +135,20 @@
       margin-right: 0;
     }
 
-    // box-shadow: $bg-shadow;
-
     @include tablet {
       min-height: 222px;
       margin-right: 24px;
+    }
+
+    @include mobile {
+      min-height: auto;
+      margin-right: 0;
+      width: 100%;
+      margin-bottom: 35px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
   }
 
@@ -129,5 +170,19 @@
         transition: height 400ms ease;
       }
     }
+
+    @include mobile {
+      height: auto;
+
+      &:hover {
+        height: auto;
+      }
+    }
+  }
+
+  .wrapper--mobile {
+    @include mobile {
+      flex-direction: column;
+    }    
   }
 }

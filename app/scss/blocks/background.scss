@@ -3,12 +3,18 @@
   background-image: url(../img/bg-header.png), url(../img/bg-directions.png),
   url(../img/bg-cards.png), url(../img/bg-team-left.png), url(../img/bg-team-right.png);
   background-repeat: no-repeat;
-  background-position: 50% 0, 50% 29%, 50% 55%, 0 95%, 92% 73%;
+  background-position: 50% 0, 50% 28%, 50% 55%, 0 95%, 92% 73%;
   background-size: 100%, auto, 100%, auto, auto;  
 
   @include tablet {
     background-image: url(../img/bg-header-tablet.png), url(../img/bg-directions-tablet.png),
     url(../img/bg-cards-tablet.png), url(../img/bg-team-left-tablet.png), url(../img/bg-team-right-tablet.png);
-    background-position: 50% 0, 5% 18%, 50% 40%, 0 69%, 95% 50%;
+    background-position: 50% 0, 5% 18%, 50% 38%, 0 59%, 95% 50%;
+  }
+
+  @include mobile {
+    background-image: url(../img/bg-header-mobile.png), url(../img/bg-directions-mobile.png),
+    url(../img/bg-cards-mobile.png), url(../img/bg-team-left-mobile.png), url(../img/bg-team-right-tablet.png);
+    background-position: 50% 0, 0 15%, 50% 56%, 0 75%, 100% 68%;
   }
 }
