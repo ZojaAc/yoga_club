@@ -84,6 +84,14 @@
     .direction-info {
       padding: 30px 100px 30px 33px;
 
+      @include tablet1100 {
+        padding: 20px 70px 16px 20px;
+      }
+
+      @include tablet850 {
+        padding-right: 50px;
+      }
+
       @include tablet {
         padding: 16px 40px 16px 20px;
       }
